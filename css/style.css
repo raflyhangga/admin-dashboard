@@ -15,7 +15,7 @@ body {
     height: 100vh;
     display: grid;
     grid-template-columns: 1fr 4fr;
-    grid-template-rows: 80px 90px;
+    grid-template-rows: 80px .3fr;
 }
 
 /* Sidebar Starts */
@@ -26,6 +26,7 @@ body {
     gap: 40px;
     font-weight: 700;
     grid-row: 1/4;
+    padding-right: 1em;
 }
 
 .menu-container {
@@ -117,6 +118,8 @@ body {
     background-color: white;
     display: flex;
     justify-content: space-around;
+    padding: 0 2em;
+    padding-bottom: 2em;
     /* align-items: flex-start; */
 }
 
@@ -194,6 +197,7 @@ body {
     gap: 20px;
     border-left: 9px solid var(--cardList);
     border-radius: 8px;
+    box-shadow: 1px 2px 4px rgba(0, 0, 0, .2);
     
 } 
 
@@ -228,6 +232,7 @@ body {
 }
 
 .announcement-container {
+    box-shadow: 1px 2px 4px rgba(0, 0, 0, .2);
     background-color: white;
     padding: 1em 1em;
     margin-top: 19px;
@@ -273,6 +278,7 @@ body {
 }
 
 .trending-container {
+    box-shadow: 1px 2px 4px rgba(0, 0, 0, .2);
     background-color: white;
     padding: 2em 1.8em;
     margin-right: 20px;
@@ -299,4 +305,24 @@ body {
 .trending-content p {
     font-size: .9em;
     color: rgba(0, 0, 0, 0.6) ;
+}
+
+
+@media (max-width: 1500px) {
+    .profile-bar {
+    flex-wrap: wrap;
+    gap: 30px;
+   }
+}
+
+@media (max-width: 768px) {
+    body {
+        font-size: 60%;
+    }
+
+    .navbar .search input[type="text"]{
+        width: 78px;
+    }
+
+    
 }
